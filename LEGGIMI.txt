@@ -1,0 +1,50 @@
+SYSADMIN RUNNER - APP PER CELLULARE (PWA)
+==========================================
+
+Contenuto della cartella
+- index.html ............ il gioco
+- manifest.webmanifest .. nome, icona, schermo intero, orientamento orizzontale
+- sw.js ................. salva il gioco sul telefono per giocare offline
+- icons/ ................ icone dell'app
+- fonts/ ................ font del gioco (licenza OFL, inclusi per l'offline)
+
+IMPORTANTE: il sito deve essere in HTTPS (tutti i servizi qui sotto lo sono).
+Aprire index.html direttamente dal telefono come file NON basta.
+
+
+1) METTERLO ONLINE - modo più veloce (Netlify Drop, 2 minuti)
+   a. Estrai lo zip.
+   b. Vai su https://app.netlify.com/drop
+   c. Trascina la cartella "sysadmin-runner" nella pagina.
+   d. Ti dà subito un link tipo https://nome-a-caso.netlify.app
+      (crea un account gratuito per tenerlo e cambiare il nome).
+
+   In alternativa: GitHub Pages (carica i file in un repository,
+   Settings > Pages > Deploy from branch) o Cloudflare Pages.
+
+
+2) INSTALLARLA SUL TELEFONO
+   Android (Chrome): apri il link > menu ⋮ > "Installa app"
+                     (o "Aggiungi a schermata Home").
+   iPhone (Safari):  apri il link > tasto Condividi > "Aggiungi alla
+                     schermata Home". Deve essere Safari.
+
+   L'icona compare nella home, il gioco si apre a tutto schermo e,
+   dopo il primo avvio, funziona anche senza connessione.
+   Record e livello raggiunto restano salvati sul telefono.
+
+
+3) AGGIORNARE IL GIOCO IN FUTURO
+   a. Sostituisci index.html con la nuova versione.
+   b. In sw.js cambia  'sysadmin-runner-v1'  in  'sysadmin-runner-v2'
+      (poi v3, ecc.).
+   c. Ricarica la cartella su Netlify.
+   I telefoni prendono la nuova versione alla successiva apertura
+   con rete.
+
+
+Note
+- Orientamento: su Android l'app si apre in orizzontale. iPhone non
+  permette di bloccarlo alle web app: basta ruotare il telefono.
+- Per pubblicarla su Play Store / App Store serve un passo in più
+  (Capacitor o, per Android, PWABuilder.com partendo dal link Netlify).
